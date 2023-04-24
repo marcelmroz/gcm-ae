@@ -25,8 +25,8 @@ key = get_random_bytes(16) # Generate a 16-byte random key
 plaintext = input().encode()
 ciphertext, nonce, tag = aes_gcm_encrypt(plaintext, key) # Encrypt the plaintext using AES-GCM with the randomly generated key
 #print(nonce)
-print('Plaintext:', plaintext.decode())
-print('Ciphertext:', ciphertext)
+#print('Plaintext:', plaintext.decode())
+#print('Ciphertext:', ciphertext)
 
 decrypted_plaintext = aes_gcm_decrypt(ciphertext, nonce, tag, key) # Decrypt the ciphertext using AES-GCM with the nonce, authentication tag, and the same key
 print('Plaintext:', plaintext.decode())
